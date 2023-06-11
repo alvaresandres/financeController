@@ -1,32 +1,30 @@
-<div class="list row">
-    <div class="col-md-6">
-      <h4>Tutorials List</h4>
-      <ul class="list-group">
-        <li
-          class="list-group-item"
-          *ngFor="let categoria of categorias; let i = index"
-          [class.active]="i == currentIndex"
-          (click)="setActiveCategoria(categoria, i)"
-        >
-          {{ categoria.etiqueta }}
-        </li>
-      </ul>
-  
-      <!--<button class="m-3 btn btn-sm btn-danger" (click)="removeAllTutorials()">
-        Remove All
-      </button>-->
-    </div>
-    <div class="col-md-6">
-      <!-- <div *ngIf="currentTutorial">
-        <app-tutorial-details
-          (refreshList)="refreshList()"
-          [tutorial]="currentTutorial"
-        ></app-tutorial-details>
-      </div> -->
-  
-      <div *ngIf="!currentCategoria">
-        <br />
-        <p>Please click on a Tutorial...</p>
-      </div>
-    </div>
-  </div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Tag</th>
+      <th scope="col">Descripción</th>
+      <th scope="col">Tipo</th>
+      <th scope="col">Sub Tipo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+    *ngFor="let categoria of categorias; let i = index"
+    >
+    <td>{{ categoria.etiqueta }}</td>
+    <td>{{ categoria.desc }}</td>
+    <td>{{ categoria.tipo }}</td>
+    <td>{{ categoria.subTipo }}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+

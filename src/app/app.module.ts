@@ -9,10 +9,12 @@ import { DatalistComponent } from './datalist/datalist.component';
 
 
 import { environment } from "../environments/environment";
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
-import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { AddCategoryComponent } from './add-category/add-category.component';
+import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
+import { ExpensesComponent } from './expenses/expenses.component';
 
 @NgModule({
   declarations: [
@@ -20,12 +22,16 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
     CounterComponent,
     HeroComponent,
     ListComponent,
-    DatalistComponent
+    DatalistComponent,
+    AddCategoryComponent,
+    ExpensesComponent
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,4 +3,5 @@ export class Categoria {
     desc?: string;
     etiqueta?: string;
     tipo?: string;
+    subTipo?: string;
 }

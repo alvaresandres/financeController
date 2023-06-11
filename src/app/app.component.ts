@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
-  public title: string = 'Personal Finance System';
+  // Personal Finance System
+  public title: string = 'PEFS';
 
 }
